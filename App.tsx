@@ -6,7 +6,7 @@ return(
   <>
     <StatusBar 
       barStyle='light-content'
-      backgroundColor='transparent'
+      backgroundColor='#0c0c0c'
       translucent
     />
     <Home/>
