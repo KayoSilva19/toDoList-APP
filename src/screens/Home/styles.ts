@@ -20,7 +20,7 @@ export const styles = StyleSheet.create({
   form: {
     flex: 1,
     flexDirection: 'row',
-    width: '100%',
+    width: 327,
     justifyContent: 'center',
     padding: 24,
     gap: 8,
@@ -85,12 +85,14 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   taskList: {
+    flex: 1,
     marginTop: 20,
-    marginLeft:24,
-    marginRight: 24,
-  
+    alignItems: 'center',
+
   },
-  emptyTaskList: {  borderTopWidth: 1,
+  emptyTaskList: {  
+    textAlign: 'center',
+    borderTopWidth: 1,
     borderColor: colors.gray400,
     paddingTop: 48,
     paddingLeft: 20,
@@ -101,6 +103,7 @@ export const styles = StyleSheet.create({
     color: colors.gray400,
   },
   emptyText: {
+    textAlign: 'center',
     alignSelf: 'center',
     marginTop: 16,
     color: colors.gray300,

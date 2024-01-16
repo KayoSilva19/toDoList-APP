@@ -4,10 +4,12 @@ import { colors } from '../../colors/styles'
 export const styles = StyleSheet.create({
   taskCard: {
     backgroundColor: colors.gray500,
-    width: '100%',
+    width: 327,
     minHeight: 64,
     borderRadius: 8,
     gap: 8,
+
+    marginBottom: 8,
 
     flexDirection: 'row',
     justifyContent:'space-between',
@@ -19,7 +21,6 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     gap: 8,
     alignItems: 'center',
-   
   },
   iconCheck: {
     height: 24,
@@ -27,10 +28,35 @@ export const styles = StyleSheet.create({
   },
   textInfoCard: {
     fontSize: 14,
-    maxWidth: 235,
+    width: 235,
     color: colors.gray100, 
   },
   iconTrash: {
     color: colors.gray300,
+  },
+  taskCompleted: {
+    fontSize: 14,
+    maxWidth: 235,
+    color: colors.gray300, 
+    textDecorationLine: 'line-through'
+  },
+  checkBox: {
+    height: 24,
+    width: 24,
+    borderWidth: 2,
+    borderRadius: 12,
+    borderColor: colors.blue
+  },
+  checkBoxActive: {
+    height: 24,
+    width: 24,
+    borderRadius: 12,
+    justifyContent: 'center',
+    backgroundColor: colors.purple,
+    border: 'none',
+  }, 
+  iconComleted: {
+    color: colors.gray100,
+    alignSelf: 'center',
   }
 })

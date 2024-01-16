@@ -2,14 +2,27 @@ import { Text, TouchableOpacity, View } from "react-native";
 import { styles } from './styles'
 import { Ionicons } from "@expo/vector-icons";
 
-export function Task() {
+type Props =  {
+  task: string;
+  onDelete: () => void;
+  onComplete: () => void;
+  active: () => boolean;
+
+}
+
+export function Task({ task, onComplete, onDelete, active }: Props) {
+
   return (
     <View style={styles.taskCard}>
       <View style={styles.infoCard}>
-        <Text style={styles.iconCheck}>1</Text>
-        <Text style={styles.textInfoCard}>Integer urna interdum massa libero auctor neque turpis turpis semper.</Text>
+        <TouchableOpacity onPress={onComplete}>
+          <View style={active() ? styles.checkBoxActive : styles.checkBox}>
+            {active() ? <Ionicons name="checkmark-outline" size={17} style={styles.iconComleted}/> : ''}
+          </View>
+        </TouchableOpacity>
+        <Text style={active() ? styles.taskCompleted : styles.textInfoCard}>{task}</Text>
       </View>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={onDelete}>
         <Ionicons name="trash-outline" size={22} style={styles.iconTrash}/>
       </TouchableOpacity>
     </View>
